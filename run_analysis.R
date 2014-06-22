@@ -43,7 +43,9 @@ activitiesConvert<-function(y,activityLabels) {
   activityLabels[y]
 }
 
-options(digits =8)
+
+#start from here
+options(digits =8) 
 X_test<-read.table(".\\test\\X_test.txt",sep="")
 X_train<-read.table(".\\train\\X_train.txt",sep="")
 X<-rbind(X_test, X_train)
