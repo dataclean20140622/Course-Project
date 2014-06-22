@@ -5,7 +5,8 @@ Getting and Cleaning Data  Course Project
 
 Hi, I'm glad to meet you on Coursera. This is my description of how my code works:
 
-If you open my run_analysis.R in the url:https://github.com/dataclean20140622/Course-Project/blob/master/run_analysis.R,you'll see that there are several functions first, but I'll talk about them when using them, they are just for convenient.
+If you open my run_analysis.R in the url:https://github.com/dataclean20140622/Course-Project/blob/master/run_analysis.R
+you'll see that there are several functions first, but I'll talk about them when using them, they are just for convenient.
 
 step 1: The first thing is read the test and train data in R. After that, I use rbind to bind them together. Note that raw data here is of nouse, I only read X_test.txt, X_train.txt, y_test.txt and y_train.txt. Also, features.txt, subject.txt and activity_label.txt are useful too.
 
