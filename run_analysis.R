@@ -20,9 +20,7 @@ removeUselessColumn<-function(data) {
   colnames(tidy)[1]<-as.character(features[1,2])
   for(i in 2:561) {
     if(columnFilter[i] == TRUE) {
-      #print(i)
       tidy<-cbind(tidy, data[,i])
-      #colnames(tidy)["new"]<-as.character(features[i,2])
     }
   }
   tidy
@@ -85,7 +83,7 @@ colnames(tidy)<-colnames
 
 tidy$activity_name<-yactivity
 tidy$subject<-subject[,1]
-
+# export tidy
 write.csv(tidy, file="tidy.csv", quote=FALSE,  row.names=FALSE, fileEncoding="UTF-8")
 
 #mean of activities
@@ -98,6 +96,6 @@ mean<-rbind(meanVector_activities, meanVector_subjects)
 clabels<-sapply(c(1:30), flabel<-function(x) { paste("subject_",as.character(x)) })
 meanRowlabels<-c(activityLabels, clabels)
 rownames(mean)<-meanRowlabels
-
+#export tidyMean 
 write.csv(mean, file="tidyMean.csv", quote=FALSE,  row.names=TRUE, fileEncoding="UTF-8")
 
